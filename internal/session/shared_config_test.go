@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/golib/aws/internal/credentials"
 	"github.com/go-ini/ini"
 	"github.com/golib/assert"
+	"github.com/golib/aws/internal/credentials"
 )
 
 var (

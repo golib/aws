@@ -6,7 +6,6 @@ import (
 	"path/filepath"
 
 	"github.com/go-ini/ini"
-
 	"github.com/golib/aws/internal/awserr"
 )
 

@@ -6,6 +6,7 @@ go:
   - 1.6.2
 
 install:
+  - go get -v github.com/go-ini/ini
   - go get -v github.com/golib/assert
 
 before_script:

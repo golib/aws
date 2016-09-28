@@ -3,8 +3,8 @@ package credentials
 import (
 	"testing"
 
-	"github.com/golib/aws/internal/awserr"
 	"github.com/golib/assert"
+	"github.com/golib/aws/internal/awserr"
 )
 
 type secondStubProvider struct {

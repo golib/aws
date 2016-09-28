@@ -1,8 +1,9 @@
 package credentials
 
 import (
-	"github.com/golib/assert"
 	"testing"
+
+	"github.com/golib/assert"
 )
 
 func TestStaticProviderGet(t *testing.T) {

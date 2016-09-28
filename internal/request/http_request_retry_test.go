@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/golib/aws/internal"
-	"github.com/golib/aws/internal/request"
-	"github.com/golib/aws/internal/awstesting/mock"
 	"github.com/golib/assert"
+	"github.com/golib/aws/internal"
+	"github.com/golib/aws/internal/awstesting/mock"
+	"github.com/golib/aws/internal/request"
 )
 
 func TestRequestCancelRetry(t *testing.T) {

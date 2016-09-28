@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/golib/aws/internal/credentials"
 	"github.com/golib/assert"
+	"github.com/golib/aws/internal/credentials"
 )
 
 func TestLoadEnvConfig_Creds(t *testing.T) {
