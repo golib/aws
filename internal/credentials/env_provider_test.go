@@ -1,9 +1,10 @@
 package credentials
 
 import (
-	"github.com/golib/assert"
 	"os"
 	"testing"
+
+	"github.com/golib/assert"
 )
 
 func TestEnvProviderRetrieve(t *testing.T) {

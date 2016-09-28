@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golib/aws/internal/awserr"
-	"github.com/golib/aws/internal/credentials/endpointcreds"
-	"github.com/golib/aws/internal/awstesting/unit"
 	"github.com/golib/assert"
+	"github.com/golib/aws/internal/awserr"
+	"github.com/golib/aws/internal/awstesting/unit"
+	"github.com/golib/aws/internal/credentials/endpointcreds"
 )
 
 func TestRetrieveRefreshableCredentials(t *testing.T) {

@@ -21,7 +21,7 @@ var copyTestConfig = Config{
 	MaxRetries:              Int(3),
 	DisableParamValidation:  Bool(true),
 	DisableComputeChecksums: Bool(true),
-	ForcePathStyle:        Bool(true),
+	ForcePathStyle:          Bool(true),
 }
 
 func TestCopy(t *testing.T) {
@@ -59,7 +59,7 @@ var mergeTestConfig = Config{
 	MaxRetries:              Int(10),
 	DisableParamValidation:  Bool(true),
 	DisableComputeChecksums: Bool(true),
-	ForcePathStyle:        Bool(true),
+	ForcePathStyle:          Bool(true),
 }
 
 var mergeTests = []struct {

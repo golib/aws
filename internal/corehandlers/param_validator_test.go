@@ -11,7 +11,6 @@ import (
 	"github.com/golib/aws/internal/client/metadata"
 	"github.com/golib/aws/internal/corehandlers"
 	"github.com/golib/aws/internal/request"
-	"github.com/stretchr/testify/require"
 )
 
 var testSvc = func() *client.Client {
@@ -110,7 +109,7 @@ func TestNoErrors(t *testing.T) {
 
 	req := testSvc.NewRequest(&request.Operation{}, input, nil)
 	corehandlers.ValidateParametersHandler.Fn(req)
-	require.NoError(t, req.Error)
+	assert.NoError(t, req.Error)
 }
 
 func TestMissingRequiredParameters(t *testing.T) {
@@ -118,7 +117,7 @@ func TestMissingRequiredParameters(t *testing.T) {
 	req := testSvc.NewRequest(&request.Operation{}, input, nil)
 	corehandlers.ValidateParametersHandler.Fn(req)
 
-	require.Error(t, req.Error)
+	assert.Error(t, req.Error)
 	assert.Equal(t, "InvalidParameter", req.Error.(awserr.Error).Code())
 	assert.Equal(t, "3 validation error(s) found.", req.Error.(awserr.Error).Message())
 
@@ -145,7 +144,7 @@ func TestNestedMissingRequiredParameters(t *testing.T) {
 	req := testSvc.NewRequest(&request.Operation{}, input, nil)
 	corehandlers.ValidateParametersHandler.Fn(req)
 
-	require.Error(t, req.Error)
+	assert.Error(t, req.Error)
 	assert.Equal(t, "InvalidParameter", req.Error.(awserr.Error).Code())
 	assert.Equal(t, "3 validation error(s) found.", req.Error.(awserr.Error).Message())
 

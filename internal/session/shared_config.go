@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/go-ini/ini"
 	"github.com/golib/aws/internal/awserr"
 	"github.com/golib/aws/internal/credentials"
-	"github.com/go-ini/ini"
 )
 
 const (
