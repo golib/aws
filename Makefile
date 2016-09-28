@@ -14,17 +14,17 @@ goreinstall:
 	go get -a -v github.com/golib/assert
 
 gotest:
-	go test github.com/golib/aws/internal
-	go test github.com/golib/aws/internal/awserr
-	go test github.com/golib/aws/internal/awstesting
-	go test github.com/golib/aws/internal/awsutil
-	go test github.com/golib/aws/internal/client
-	go test github.com/golib/aws/internal/corehandlers
-	go test github.com/golib/aws/internal/credentials
-	go test github.com/golib/aws/internal/defaults
-	go test github.com/golib/aws/internal/endpoints
-	go test github.com/golib/aws/internal/request
-	go test github.com/golib/aws/internal/session
-	go test github.com/golib/aws/internal/signer/v4
+	go test github.com/golib/aws/service
+	go test github.com/golib/aws/service/awserr
+	go test github.com/golib/aws/service/awstesting
+	go test github.com/golib/aws/service/awsutil
+	go test github.com/golib/aws/service/client
+	go test github.com/golib/aws/service/corehandlers
+	go test github.com/golib/aws/service/credentials
+	go test github.com/golib/aws/service/defaults
+	go test github.com/golib/aws/service/endpoints
+	go test github.com/golib/aws/service/request
+	go test github.com/golib/aws/service/session
+	go test github.com/golib/aws/service/signer/v4
 
 travis: gobuild gotest
