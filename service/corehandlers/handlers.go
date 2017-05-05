@@ -115,9 +115,14 @@ var SendHandler = request.NamedHandler{
 var ValidateResponseHandler = request.NamedHandler{
 	Name: "core.ValidateResponseHandler",
 	Fn: func(r *request.Request) {
-		if r.HTTPResponse.StatusCode == 0 || r.HTTPResponse.StatusCode >= 300 {
+		if r.HTTPResponse.StatusCode == 0 || r.HTTPResponse.StatusCode >= 500 {
 			// this may be replaced by an UnmarshalError handler
-			r.Error = awserr.New("UnknownError", "unknown error", nil)
+			msg := http.StatusText(r.HTTPResponse.StatusCode)
+			if msg == "" {
+				msg = "unknown error"
+			}
+
+			r.Error = awserr.New("UnknownError", msg, nil)
 		}
 	},
 }
